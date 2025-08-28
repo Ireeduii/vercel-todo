@@ -1,14 +1,16 @@
 "use client";
 import { useState } from "react";
-
 import { Input, Buttons, AddButton } from "@/components";
-
 const ToDo = () => {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
   const handleOnChange = (event) => {
     setInputValue(event.target.value);
+  };
+
+  const handleAddTodo = () => {
+    setTodos([...todos, inputValue]);
   };
 
   const handleOnClick = () => {
@@ -18,8 +20,8 @@ const ToDo = () => {
   };
 
   return (
-    <div className="bg-gray-100 w-full h-screen flex justify-center items-center">
-      <div className="w-[380px] h-[300px] border rounded-md shadow-xl bg-white p-6">
+    <div className="bg-gray-100 w-full h-screen flex justify-center items-center ">
+      <div className="w-[380px] h-fit border rounded-md shadow-xl bg-white p-6">
         <h1 className="font-semibold text-black text-xl text-center mb-4">
           To-Do List
         </h1>
@@ -34,7 +36,7 @@ const ToDo = () => {
         </div>
 
         <div>
-          <Buttons />
+          <Buttons onClick={handleAddTodo}></Buttons>
         </div>
 
         <p className="text-[#6B7280] text-center text-[17px] mt-6">
