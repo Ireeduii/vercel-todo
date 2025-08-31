@@ -9,6 +9,6 @@
 // export * from "./easy_toggle";
 // export * from "./easy_input_field";
 // export * from "./medium_todo";
-export * from "./todoaddbtn";
-export * from "./todobtns";
-export * from "./todoinput";
+export * from "./src/components/todo/todoaddbtn";
+export * from "./src/components/todo/todobtns";
+export * from "./src/components/todo/todoinput";
