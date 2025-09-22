@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Input, AddButton } from "../../..";
+import { Input } from "@/components/TodoInput";
+import { AddButton } from "@/components/TodoAddBtn";
 
 const ToDo = () => {
   const [todos, setTodos] = useState([]);
@@ -77,7 +78,6 @@ const ToDo = () => {
           </button>
         </div>
 
-        {/* list */}
         <div className="space-y-2">
           {filteredTodos.length === 0 ? (
             <p className="text-[#6B7280] text-center text-[17px]">
